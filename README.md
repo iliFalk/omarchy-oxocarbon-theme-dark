@@ -1,54 +1,40 @@
-# Oxocarbon Dark — Horizon
+# Oxocarbon Dark
 
-A customised build of the original
-[Oxocarbon Dark theme for Omarchy](https://github.com/HANCORE-linux/omarchy-oxocarbon-theme)
-by [HANCORE-linux](https://github.com/HANCORE-linux).
+A customised build of the original Oxocarbon Dark theme for Omarchy by HANCORE-linux.
 
-This build keeps the original Oxocarbon Dark palette and configuration, and
-adds a dark-toned horizon wallpaper plus a slightly lifted bar surface.
+![The horizon wallpaper behind the Oxocarbon Dark bar](preview.png)
 
-![Preview](preview.png)
+- **What it is:** a theme for Omarchy, the Arch Linux desktop.
+- **What it does:** paints the whole desktop in the Oxocarbon Dark palette and adds a dark-toned horizon wallpaper. It also lifts the top bar to `#262626`, so the bar separates from the wallpaper.
+- **What it needs:** Omarchy on Arch Linux. Nothing else.
+- **How to start:** run `omarchy-theme-install https://github.com/iliFalk/omarchy-oxocarbon-theme-dark.git`. It clones the theme and applies it at once.
 
-## Installation
+## Install
 
-```bash
-omarchy-theme-install https://github.com/iliFalk/omarchy-oxocarbon-theme-dark.git
-```
+1. Run `omarchy-theme-install https://github.com/iliFalk/omarchy-oxocarbon-theme-dark.git`. It clones the theme to `~/.config/omarchy/themes/oxocarbon-theme-dark` and applies it.
+2. To apply it again later, run `omarchy-theme-set oxocarbon-theme-dark`.
 
-Omarchy derives the theme name from the repository name, so it appears as
-**Oxocarbon Theme Dark** in the theme picker. Apply it directly with:
+Omarchy names the theme after the repository, so the theme menu lists it as **Oxocarbon Theme Dark**.
 
-```bash
-omarchy-theme-set oxocarbon-theme-dark
-```
+## Use
 
-## Changes from the original
+| Where | What it does |
+|---|---|
+| Theme menu | **Oxocarbon Theme Dark** applies the full palette to the shell, the bar, the launcher and the notifications. |
+| Terminal | Alacritty, Ghostty, Kitty and Foot take the palette that `colors.toml` defines. |
+| Backgrounds | `backgrounds/` holds the horizon wallpaper that ships with the theme, `alt-backgrounds/` the alternates. |
 
-- Added `backgrounds/1-horisont.png`, a native **6016 × 3384** colour-graded
-  horizon wallpaper. The green glow is mapped to the Oxocarbon blues
-  `#33B1FF` / `#82CFFF`, with the background around `#161616`.
-- Lifted the top bar to `#262626` at alpha `0.97` so it separates subtly from
-  the wallpaper instead of blending into it.
-- Everything else is the original Oxocarbon Dark theme.
+## Settings
 
-## Original theme
+| File | Holds |
+|---|---|
+| `colors.toml` | The palette Omarchy generates the terminal colours from. |
+| `backgrounds/`, `alt-backgrounds/` | The wallpapers the theme offers. |
+| `custom_theme.json` | The theme entry that browsers and web apps read. |
+| `waybar.css`, `mako.ini`, `walker.css`, `swayosd.css` | The bar, the notifications, the launcher and the volume overlay. |
+| `preview.png` | The picture above. Replace it when the look changes. |
 
-This project is a derivative of:
+## Docs
 
-- [HANCORE-linux/omarchy-oxocarbon-theme](https://github.com/HANCORE-linux/omarchy-oxocarbon-theme)
-  — the original theme, design and configuration
-- [nyoom-engineering/oxocarbon.nvim](https://github.com/nyoom-engineering/oxocarbon.nvim)
-  — Oxocarbon colours
-- [tahayvr/omarchist](https://github.com/tahayvr/omarchist) — theme structure
-  used by the original project
-
-Original installation command:
-
-```bash
-omarchy-theme-install https://github.com/HANCORE-linux/omarchy-oxocarbon-theme.git
-```
-
-## License
-
-MIT — see [LICENSE](LICENSE). The original Oxocarbon Dark theme is MIT-licensed;
-this derivative keeps the original copyright notice and attribution.
+- `docs/DEVELOPMENT.md` — the changes against the original theme, the credits and the licence.
+- `LICENSE` — MIT.
